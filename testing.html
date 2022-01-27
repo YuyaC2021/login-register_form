@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/testing.css">
+    <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
+    <title>Document</title>
+</head>
+<body>
+    <main>
+        <nav>
+            <div class="visibleSwitch">Registration</div>
+            <!--you can not set the value fr div-->
+            <div class="visibleSwitch changeColor">Login</div>
+        </nav>
+        <!--why when JS excuted CSS rined it should be the center
+        inline css doesn't work 
+        if you use position it works 
+        -->
+        <div id="registRation" class="cover forRegi">
+            <div class="register">
+                <div class="register_element basic_info">
+                    <span><i class="fas fa-signature"></i></span>
+                    <input class="register_BasicInput" id="firstname" type="text" placeholder="First Name">
+                </div>
+
+                <div class="register_element basic_info">
+                    <span><i class="fas fa-signature"></i></span>
+                    <input  class="register_BasicInput" id="lastname" type="text" placeholder="Last Name">
+                </div>
+        
+                <div class="register_element basic_info">
+                    <span><i class="fab fa-500px"></i></span>
+                    <input  class="register_BasicInput" id="age" type="number" placeholder="Age">
+                </div>
+        
+                <div class="register_element basic_info">
+                    <span><i class="far fa-envelope"></i></span>
+                    <input class="register_BasicInput" id="email" type="email" placeholder="Email">
+                </div>
+        
+                <div class="register_element radia">
+                    <div class="redioOption">    
+                        <input name="cource" value="esl" type="radio" >
+                        <label for="esl">ESL</label>
+                    </div>
+                    <div class="redioOption">   
+                        <input name="cource" value="career" type="radio" >
+                        <label for="career">Career</label>
+                    </div>
+                </div>
+        
+        
+                <div class="register_element labelcolor">
+                    <label for="courceOption">Classes</label>
+                    <select id="courceOption">
+
+                    </select>
+                </div>
+            
+                <div class="register_element labelcolor">
+                    <label>Remember me</label>
+                    <input type="checkbox">
+                </div>
+                
+                <input type="submit" placeholder="Register">
+            </div>
+        </div>
+
+         <div id="logIn" class="cover forLog">
+            <div class="login">
+                <div class="login_element basic_info">
+                    <span><i class="fas fa-signature"></i></span>
+                    <input class="login_BasicInput" id="firstname" type="text" placeholder="First Name">
+                </div>
+
+                <div class="login_element basic_info">
+                    <span><i class="fas fa-signature"></i></span>
+                    <input  class="login_BasicInput" id="lastname" type="text" placeholder="Last Name">
+                </div>
+        
+                <div class="login_element basic_info">
+                    <span><i class="fas fa-envelope"></i></span>
+                    <input  class="login_BasicInput" id="email" type="email" placeholder="Email">
+                </div>
+                <div class="login_element basic_info">
+                    <span><i class="fas fa-graduation-cap"></i></span>
+                    <input  class="login_BasicInput" id="number" type="number" placeholder="Student Number">
+                </div>
+        
+                <div class="login_element radia">
+                    <div class="redioOptionForlog">    
+                        <input name="courcelog" value="esllog" type="radio" >
+                        <label for="esllog">ESL</label>
+                    </div>
+                    <div class="redioOptionForlog">   
+                        <input name="courcelog" value="careerlog" type="radio" >
+                        <label for="careerlog">Career</label>
+                    </div>
+                </div>
+        
+        
+                <div class="login_element">
+                    <label for="courceOptionlog">Classes</label>
+                    <select id="courceOptionlog">
+
+                    </select>
+                </div>
+            
+                <div class="login_element">
+                    <span>Remember me</span>
+                    <input type="checkbox">
+                </div>
+                
+                <input type="submit" placeholder="Submit">
+            </div>
+        </div>  
+    </main>
+    <script>
+        var esl={
+            "ESL":"ESL",
+            "Tofel":"Tofel",
+            "Ielts":"Ielts"
+        }
+        var career={
+            "Web Development":"WD",
+            "User Interface":"UI",
+            "User experience":"UX",
+            "Hospitality Management":"HM",
+            "Digital Marketing":"DM"
+        }
+
+        function populating(toWhere,text,value){
+            var element=document.createElement("option");
+            element.innerHTML=text;
+            element.value=value;
+            toWhere.appendChild(element);
+        }
+
+        window.addEventListener("load",function(){
+            var swiching=document.querySelectorAll(".visibleSwitch");
+            var regi=document.querySelector("#registRation");
+            var logi=document.querySelector("#logIn");
+            var nav=document.querySelector("nav");
+            regi.style.display="none";
+            logi.style.display="none";
+
+            function fadinR(){
+                nav.style.display="none";
+                logi.style.display="none";
+                regi.style.display="block";
+                window.addEventListener("click",function(e){
+                    if(e.target==regi){
+                        regi.classList.remove("fading");
+                        setTimeout(timing,500);
+                    }
+                });
+            }
+            function timing(){
+                regi.style.display="none";
+                nav.style.display="block";
+                nav.classList.remove("navFade");
+            }
+            function timing2(){
+                logi.style.display="none";
+                nav.style.display="block";
+                nav.classList.remove("navFade");
+            }
+            function fadinL(){
+                nav.style.display="none";
+                regi.style.display="none";
+                logi.style.display="block";
+                window.addEventListener("click",function(e){
+                    if(e.target==logi){
+                        logi.classList.remove("fading");
+                        logi.classList.remove("fading");
+                        setTimeout(timing2,500);        
+                    }
+                });
+            }
+            function timestting(){
+                nav.style.display="none";
+            }
+            for(var i=0;i<swiching.length;i++){
+                swiching[i].addEventListener("click",function(e){
+                    nav.classList.add("navFade");   
+                    if(e.target.innerHTML=="Registration"){
+                        logi.classList.remove("fading");
+                        regi.classList.add("fading");
+                        setTimeout(fadinR,500);
+                       
+
+                    }
+                    else if(e.target.innerHTML=="Login"){
+                        regi.classList.remove("fading");
+                        logi.classList.add("fading");
+                        setTimeout(fadinL,500);
+                    
+
+                    }
+
+                  
+
+                });
+            }
+            var selectBoxRegi=document.querySelector("#courceOption");
+            var selectBoxLog=document.querySelector("#courceOptionlog");
+                selectBoxRegi.disabled=true;
+                selectBoxLog.disabled=true;
+            var inputBasics=document.querySelectorAll("input");
+
+            for(var i=0;i<inputBasics.length;i++){
+                if(inputBasics[i].className=="register_BasicInput"){
+                    inputBasics[i].addEventListener("focus",function(e){
+                        e.target.style.backgroundColor="white";
+                    });
+                    inputBasics[i].addEventListener("blur",function(e){
+                        this.style.backgroundColor="transparent";
+                    });
+                }
+                else if(inputBasics[i].className=="login_BasicInput"){
+                    inputBasics[i].addEventListener("focus",function(e){
+                        e.target.style.backgroundColor="rgba(115, 172, 238, 0.963)";
+                    });
+                    inputBasics[i].addEventListener("blur",function(e){
+                        this.style.backgroundColor="transparent";
+                    });
+                }
+                else if(inputBasics[i].name=="cource"){
+                    inputBasics[i].addEventListener("change",function(e){
+                        selectBoxRegi.disabled=false;
+                        selectBoxRegi.innerHTML="";
+                        if(e.target.value=="esl"){
+                            for(var j in esl){
+                                populating(selectBoxRegi,j,esl[j]);
+                            }
+                        }
+                        else if(this.value=="career"){
+                            for(var j in career){
+                                populating(selectBoxRegi,j,career[j]);
+                            }
+                        }
+                    });
+                }
+                else if(inputBasics[i].name=="courcelog"){
+                    inputBasics[i].addEventListener("change",function(e){
+                        selectBoxLog.disabled=false;
+                        selectBoxLog.innerHTML="";
+                        if(e.target.value=="esllog"){
+                            for(var j in esl){
+                                populating(selectBoxLog,j,esl[j]);
+                            }
+                        }
+                        else if(this.value=="careerlog"){
+                            for(var j in career){
+                                populating(selectBoxLog,j,career[j]);
+                            }
+                        }
+                    });
+                }
+            }
+        });
+
+
+    </script>
+</body>
+</html>

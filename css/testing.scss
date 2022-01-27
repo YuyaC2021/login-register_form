@@ -1,0 +1,219 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-size: 20px;
+}
+@mixin flexing($direct:row,$justify:center,$align:center){
+    display: flex;
+    flex-direction: $direct;
+    justify-content: $justify;
+    align-items: $align;
+}
+main{
+    nav{
+        position: relative;
+        width: 100%;
+        height: 100vh;
+        background-image: url("../image/tamwood1.jpg");
+        background-position: bottom;
+        background-repeat: no-repeat;
+        background-size: cover;
+        @media (min-width:768px){
+            background-position: center;
+        }
+        opacity: 1;
+        transform: scale(1,1);
+        animation: navFade1;
+        animation-duration: 0.5s;
+        animation-fill-mode: forwards;
+        @keyframes navFade1 {
+            0%{transform: scale(0.0);opacity: 0;}
+            100%{transform: scale(1.1);opacity: 1;}
+        }
+        @media (min-width:768px){
+            @include flexing($justify:space-evenly);
+        }
+        &>div{
+            position: absolute;
+            border: none;
+            border-radius: 5px;
+            padding: 10px 15px;
+            cursor: pointer;
+            width: 60vw;
+            height: 15vh;
+            text-align: center;
+            @include flexing;
+            @media (min-width:768px){
+                width: 30vw;
+                height: 20vh;
+                &:hover{
+                    animation: btn;
+                    animation-duration:1s;
+                    animation-iteration-count: infinite;
+                    animation-direction: alternate;
+                    transform: scale(1,1);
+                }
+                @keyframes btn {
+                    0%{transform:scale(1,1);}
+                    50%{transform:scale(0.5,0.5);}
+                }
+            }
+            &:first-child{
+                left: 20vw;
+                top: 55vh;
+                @media (min-width:768px){
+                    left: 15vw;
+                    top: 70vh;
+                }
+            }
+            &:last-child{
+                left: 20vw;
+                top: 75vh;
+                @media (min-width:768px){
+                    left: 55vw;
+                    top: 70vh;
+                }
+            }
+        } 
+    }  
+    .navFade{
+        opacity: 0;
+        transform: scale(0,0);
+        animation: navFade2;
+        animation-duration: 0.5s;
+        animation-fill-mode: forwards;
+        @keyframes navFade2{
+            0%{transform: scale(1.1);opacity: 1;}
+            100%{transform: scale(0.0);opacity: 0;}
+        }
+    }
+    
+    .visibleSwitch{
+        background-color: rgb(165, 42, 42);
+        &:hover{
+            background-color: rgb(165, 42, 42);
+            
+        }
+    }
+    .visibleSwitch.changeColor{
+        color: white;
+        background-color: rgb(115, 172, 238); 
+        &:hover{
+            background-color: rgb(115, 172, 238); 
+        }
+    }
+
+    #registRation{
+        background-image: url("../image/tamwood2.png");
+    }
+    .cover.forRegi, .cover.forLog{ 
+        background-position: bottom;
+        background-repeat: no-repeat;
+        background-size: cover;
+        animation: fading 0.5s forwards; 
+        margin-top: 20px;
+        width: 100vw;
+        min-height: 100vh;
+        position: relative;
+        .register, .login{
+            @include flexing($direct:column);
+            position: absolute;
+            top: 10vh;
+            left: 20vw;
+            width: 60%;
+            height: 80vh;
+            padding: 30px 20px;
+            background-color:rgba(255, 255, 255, 0.712);
+            color: brown;
+            .register_element, .login_element{
+                margin-bottom:10px;
+                select{
+                   width: 200px;
+                }
+                &>input[type=checkbox]{
+                    margin-left: 10px;
+                    transform: scale(1.5,1.5);
+                }    
+            }
+          
+            .register_element.basic_info, .login_element.basic_info{
+                width: 100%;
+                @include flexing;
+                span{
+                    width: 50px;
+                    text-align: center;
+                
+                }
+                &>input{
+                    border: none;
+                    outline: none;
+                    color: brown;
+                    background-color: transparent;
+                    &:focus{
+                        border: none;
+                        outline: none;
+                    }
+                    &::placeholder{
+                        color: brown;
+                    }
+                }
+            }
+          
+            .register_element.radia, .login_element.radia{
+                width: 80%;
+                @include flexing($justify:space-evenly);
+            }
+            &>input, select{
+                cursor: pointer;
+            }
+            &>input{
+                padding: 5px 10px;
+                border: none;
+                border-radius: 2px;
+                width: 80%;
+                background-color: rgba(165, 42, 42, 0.664);
+                &:hover{
+                    background-color: brown;
+                }
+            }
+        }
+    }
+    .cover.forLog{
+        background-image: url("../image/Tamwood3.jpeg");
+        *{
+            color: white;
+        }
+        .login{
+            background-color: rgba(115, 172, 238, 0.774);
+            .login_element.basic_info{
+                &>input::placeholder{
+                    color:white; 
+                }
+            }
+            &>input{
+                background-color: rgba(115, 172, 238, 0.346);
+                &:hover{
+                    background-color: rgb(115, 172, 238);
+                }
+            }
+            .login_element{
+                select{
+                    background-color:grey;
+                }
+            }
+        }
+    }
+    .cover.forRegi.fading, .cover.forLog.fading{
+    animation: fading1 0.5s forwards;   
+    }
+    @keyframes fading{
+        0%{transform: scale(1.1);opacity: 1;}
+        100%{transform: scale(0.0);opacity: 0;}
+    }
+    @keyframes fading1{
+        0%{transform: scale(0.0);opacity: 0;}
+            100%{transform: scale(1.1);opacity: 1;}
+    }
+    
+}

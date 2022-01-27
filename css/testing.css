@@ -1,0 +1,453 @@
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-size: 20px;
+}
+
+main nav {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background-image: url("../image/tamwood1.jpg");
+  background-position: bottom;
+  background-repeat: no-repeat;
+  background-size: cover;
+  opacity: 1;
+  -webkit-transform: scale(1, 1);
+          transform: scale(1, 1);
+  -webkit-animation: navFade1;
+          animation: navFade1;
+  -webkit-animation-duration: 0.5s;
+          animation-duration: 0.5s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+@media (min-width: 768px) {
+  main nav {
+    background-position: center;
+  }
+}
+
+@-webkit-keyframes navFade1 {
+  0% {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+    opacity: 1;
+  }
+}
+
+@keyframes navFade1 {
+  0% {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+    opacity: 1;
+  }
+}
+
+@media (min-width: 768px) {
+  main nav {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+
+main nav > div {
+  position: absolute;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 15px;
+  cursor: pointer;
+  width: 60vw;
+  height: 15vh;
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+@media (min-width: 768px) {
+  main nav > div {
+    width: 30vw;
+    height: 20vh;
+  }
+  main nav > div:hover {
+    -webkit-animation: btn;
+            animation: btn;
+    -webkit-animation-duration: 1s;
+            animation-duration: 1s;
+    -webkit-animation-iteration-count: infinite;
+            animation-iteration-count: infinite;
+    -webkit-animation-direction: alternate;
+            animation-direction: alternate;
+    -webkit-transform: scale(1, 1);
+            transform: scale(1, 1);
+  }
+  @-webkit-keyframes btn {
+    0% {
+      -webkit-transform: scale(1, 1);
+              transform: scale(1, 1);
+    }
+    50% {
+      -webkit-transform: scale(0.5, 0.5);
+              transform: scale(0.5, 0.5);
+    }
+  }
+  @keyframes btn {
+    0% {
+      -webkit-transform: scale(1, 1);
+              transform: scale(1, 1);
+    }
+    50% {
+      -webkit-transform: scale(0.5, 0.5);
+              transform: scale(0.5, 0.5);
+    }
+  }
+}
+
+main nav > div:first-child {
+  left: 20vw;
+  top: 55vh;
+}
+
+@media (min-width: 768px) {
+  main nav > div:first-child {
+    left: 15vw;
+    top: 70vh;
+  }
+}
+
+main nav > div:last-child {
+  left: 20vw;
+  top: 75vh;
+}
+
+@media (min-width: 768px) {
+  main nav > div:last-child {
+    left: 55vw;
+    top: 70vh;
+  }
+}
+
+main .navFade {
+  opacity: 0;
+  -webkit-transform: scale(0, 0);
+          transform: scale(0, 0);
+  -webkit-animation: navFade2;
+          animation: navFade2;
+  -webkit-animation-duration: 0.5s;
+          animation-duration: 0.5s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+@-webkit-keyframes navFade2 {
+  0% {
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+    opacity: 0;
+  }
+}
+
+@keyframes navFade2 {
+  0% {
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+    opacity: 0;
+  }
+}
+
+main .visibleSwitch {
+  background-color: brown;
+}
+
+main .visibleSwitch:hover {
+  background-color: brown;
+}
+
+main .visibleSwitch.changeColor {
+  color: white;
+  background-color: #73acee;
+}
+
+main .visibleSwitch.changeColor:hover {
+  background-color: #73acee;
+}
+
+main #registRation {
+  background-image: url("../image/tamwood2.png");
+}
+
+main .cover.forRegi, main .cover.forLog {
+  background-position: bottom;
+  background-repeat: no-repeat;
+  background-size: cover;
+  -webkit-animation: fading 0.5s forwards;
+          animation: fading 0.5s forwards;
+  margin-top: 20px;
+  width: 100vw;
+  min-height: 100vh;
+  position: relative;
+}
+
+main .cover.forRegi .register, main .cover.forRegi .login, main .cover.forLog .register, main .cover.forLog .login {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: absolute;
+  top: 10vh;
+  left: 20vw;
+  width: 60%;
+  height: 80vh;
+  padding: 30px 20px;
+  background-color: rgba(255, 255, 255, 0.712);
+  color: brown;
+}
+
+main .cover.forRegi .register .register_element, main .cover.forRegi .register .login_element, main .cover.forRegi .login .register_element, main .cover.forRegi .login .login_element, main .cover.forLog .register .register_element, main .cover.forLog .register .login_element, main .cover.forLog .login .register_element, main .cover.forLog .login .login_element {
+  margin-bottom: 10px;
+}
+
+main .cover.forRegi .register .register_element select, main .cover.forRegi .register .login_element select, main .cover.forRegi .login .register_element select, main .cover.forRegi .login .login_element select, main .cover.forLog .register .register_element select, main .cover.forLog .register .login_element select, main .cover.forLog .login .register_element select, main .cover.forLog .login .login_element select {
+  width: 200px;
+}
+
+main .cover.forRegi .register .register_element > input[type=checkbox], main .cover.forRegi .register .login_element > input[type=checkbox], main .cover.forRegi .login .register_element > input[type=checkbox], main .cover.forRegi .login .login_element > input[type=checkbox], main .cover.forLog .register .register_element > input[type=checkbox], main .cover.forLog .register .login_element > input[type=checkbox], main .cover.forLog .login .register_element > input[type=checkbox], main .cover.forLog .login .login_element > input[type=checkbox] {
+  margin-left: 10px;
+  -webkit-transform: scale(1.5, 1.5);
+          transform: scale(1.5, 1.5);
+}
+
+main .cover.forRegi .register .register_element.basic_info, main .cover.forRegi .register .login_element.basic_info, main .cover.forRegi .login .register_element.basic_info, main .cover.forRegi .login .login_element.basic_info, main .cover.forLog .register .register_element.basic_info, main .cover.forLog .register .login_element.basic_info, main .cover.forLog .login .register_element.basic_info, main .cover.forLog .login .login_element.basic_info {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+main .cover.forRegi .register .register_element.basic_info span, main .cover.forRegi .register .login_element.basic_info span, main .cover.forRegi .login .register_element.basic_info span, main .cover.forRegi .login .login_element.basic_info span, main .cover.forLog .register .register_element.basic_info span, main .cover.forLog .register .login_element.basic_info span, main .cover.forLog .login .register_element.basic_info span, main .cover.forLog .login .login_element.basic_info span {
+  width: 50px;
+  text-align: center;
+}
+
+main .cover.forRegi .register .register_element.basic_info > input, main .cover.forRegi .register .login_element.basic_info > input, main .cover.forRegi .login .register_element.basic_info > input, main .cover.forRegi .login .login_element.basic_info > input, main .cover.forLog .register .register_element.basic_info > input, main .cover.forLog .register .login_element.basic_info > input, main .cover.forLog .login .register_element.basic_info > input, main .cover.forLog .login .login_element.basic_info > input {
+  border: none;
+  outline: none;
+  color: brown;
+  background-color: transparent;
+}
+
+main .cover.forRegi .register .register_element.basic_info > input:focus, main .cover.forRegi .register .login_element.basic_info > input:focus, main .cover.forRegi .login .register_element.basic_info > input:focus, main .cover.forRegi .login .login_element.basic_info > input:focus, main .cover.forLog .register .register_element.basic_info > input:focus, main .cover.forLog .register .login_element.basic_info > input:focus, main .cover.forLog .login .register_element.basic_info > input:focus, main .cover.forLog .login .login_element.basic_info > input:focus {
+  border: none;
+  outline: none;
+}
+
+main .cover.forRegi .register .register_element.basic_info > input::-webkit-input-placeholder, main .cover.forRegi .register .login_element.basic_info > input::-webkit-input-placeholder, main .cover.forRegi .login .register_element.basic_info > input::-webkit-input-placeholder, main .cover.forRegi .login .login_element.basic_info > input::-webkit-input-placeholder, main .cover.forLog .register .register_element.basic_info > input::-webkit-input-placeholder, main .cover.forLog .register .login_element.basic_info > input::-webkit-input-placeholder, main .cover.forLog .login .register_element.basic_info > input::-webkit-input-placeholder, main .cover.forLog .login .login_element.basic_info > input::-webkit-input-placeholder {
+  color: brown;
+}
+
+main .cover.forRegi .register .register_element.basic_info > input:-ms-input-placeholder, main .cover.forRegi .register .login_element.basic_info > input:-ms-input-placeholder, main .cover.forRegi .login .register_element.basic_info > input:-ms-input-placeholder, main .cover.forRegi .login .login_element.basic_info > input:-ms-input-placeholder, main .cover.forLog .register .register_element.basic_info > input:-ms-input-placeholder, main .cover.forLog .register .login_element.basic_info > input:-ms-input-placeholder, main .cover.forLog .login .register_element.basic_info > input:-ms-input-placeholder, main .cover.forLog .login .login_element.basic_info > input:-ms-input-placeholder {
+  color: brown;
+}
+
+main .cover.forRegi .register .register_element.basic_info > input::-ms-input-placeholder, main .cover.forRegi .register .login_element.basic_info > input::-ms-input-placeholder, main .cover.forRegi .login .register_element.basic_info > input::-ms-input-placeholder, main .cover.forRegi .login .login_element.basic_info > input::-ms-input-placeholder, main .cover.forLog .register .register_element.basic_info > input::-ms-input-placeholder, main .cover.forLog .register .login_element.basic_info > input::-ms-input-placeholder, main .cover.forLog .login .register_element.basic_info > input::-ms-input-placeholder, main .cover.forLog .login .login_element.basic_info > input::-ms-input-placeholder {
+  color: brown;
+}
+
+main .cover.forRegi .register .register_element.basic_info > input::placeholder, main .cover.forRegi .register .login_element.basic_info > input::placeholder, main .cover.forRegi .login .register_element.basic_info > input::placeholder, main .cover.forRegi .login .login_element.basic_info > input::placeholder, main .cover.forLog .register .register_element.basic_info > input::placeholder, main .cover.forLog .register .login_element.basic_info > input::placeholder, main .cover.forLog .login .register_element.basic_info > input::placeholder, main .cover.forLog .login .login_element.basic_info > input::placeholder {
+  color: brown;
+}
+
+main .cover.forRegi .register .register_element.radia, main .cover.forRegi .register .login_element.radia, main .cover.forRegi .login .register_element.radia, main .cover.forRegi .login .login_element.radia, main .cover.forLog .register .register_element.radia, main .cover.forLog .register .login_element.radia, main .cover.forLog .login .register_element.radia, main .cover.forLog .login .login_element.radia {
+  width: 80%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+main .cover.forRegi .register > input, main .cover.forRegi .register select, main .cover.forRegi .login > input, main .cover.forRegi .login select, main .cover.forLog .register > input, main .cover.forLog .register select, main .cover.forLog .login > input, main .cover.forLog .login select {
+  cursor: pointer;
+}
+
+main .cover.forRegi .register > input, main .cover.forRegi .login > input, main .cover.forLog .register > input, main .cover.forLog .login > input {
+  padding: 5px 10px;
+  border: none;
+  border-radius: 2px;
+  width: 80%;
+  background-color: rgba(165, 42, 42, 0.664);
+}
+
+main .cover.forRegi .register > input:hover, main .cover.forRegi .login > input:hover, main .cover.forLog .register > input:hover, main .cover.forLog .login > input:hover {
+  background-color: brown;
+}
+
+main .cover.forLog {
+  background-image: url("../image/Tamwood3.jpeg");
+}
+
+main .cover.forLog * {
+  color: white;
+}
+
+main .cover.forLog .login {
+  background-color: rgba(115, 172, 238, 0.774);
+}
+
+main .cover.forLog .login .login_element.basic_info > input::-webkit-input-placeholder {
+  color: white;
+}
+
+main .cover.forLog .login .login_element.basic_info > input:-ms-input-placeholder {
+  color: white;
+}
+
+main .cover.forLog .login .login_element.basic_info > input::-ms-input-placeholder {
+  color: white;
+}
+
+main .cover.forLog .login .login_element.basic_info > input::placeholder {
+  color: white;
+}
+
+main .cover.forLog .login > input {
+  background-color: rgba(115, 172, 238, 0.346);
+}
+
+main .cover.forLog .login > input:hover {
+  background-color: #73acee;
+}
+
+main .cover.forLog .login .login_element select {
+  background-color: grey;
+}
+
+main .cover.forRegi.fading, main .cover.forLog.fading {
+  -webkit-animation: fading1 0.5s forwards;
+          animation: fading1 0.5s forwards;
+}
+
+@-webkit-keyframes fading {
+  0% {
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+    opacity: 0;
+  }
+}
+
+@keyframes fading {
+  0% {
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+    opacity: 0;
+  }
+}
+
+@-webkit-keyframes fading1 {
+  0% {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+    opacity: 1;
+  }
+}
+
+@keyframes fading1 {
+  0% {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+    opacity: 1;
+  }
+}
+/*# sourceMappingURL=testing.css.map */
