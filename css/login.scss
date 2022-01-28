@@ -1,0 +1,135 @@
+*{
+    padding: none;
+    margin: none;
+    box-sizing: border-box;
+}
+@mixin flexing($direct:row,$justify:center,$align:center){
+    display: flex;
+    flex-direction: $direct;
+    justify-content: $justify;
+    align-items: $align;
+}
+
+.bgcolor{
+    @include flexing;
+    width: 100vw;
+    min-height: 100vh;
+    height: auto;
+    @media (max-width:600px){
+        padding: 30px 0;  
+        height: 800px;
+    }
+
+    .fullcontainer{
+        @include flexing;
+        box-shadow: -5px 5px 5px rgba(0, 0, 0, 0.247);
+        width: 80%;
+        max-width: 900px;
+        min-width: 400px;
+        height: 400px;
+        @media (max-width:600px){
+            @include flexing($direct:column);
+        }
+        
+        .formcontent{
+            @include flexing($direct:column);
+            background-color: white;
+            //change size later
+            height: 100%;
+            width:60%;
+            @media (max-width:600px){
+                width: 80%;
+                padding: 30px 0;  
+            }
+
+            &>div{
+                width: 100%;
+                text-align: center;
+
+                &>div{
+                    a{
+                        margin:5px 10px;
+                        i{
+                            color: plum;
+                        }
+                    }
+                }
+            }
+            .loginform{
+                @include flexing($direct:column);
+                width: 100%;
+
+                &>div{
+                    margin-bottom: 20px;
+
+                    &>input{
+                        border: none;
+                        outline: none;
+                        border-radius: 20px;
+                        background-color: rgba(250, 196, 210, 0.788);
+                        padding: 5px 0 5px 10px;
+                        font-size: 17px;
+                        width: 300px;
+
+                        &[type=checkbox]{
+                            width: 30px;   
+                        }
+                    }
+                   
+                }
+                &>input{
+                    border: none;
+                    outline: none;
+                    border-radius: 20px;
+                    background-color: rgba(250, 196, 210, 0.479);
+                    padding: 5px 0 5px 10px;
+                    font-size: 17px;
+                    width: 150px;
+
+                    &:hover{
+                        background-color: rgb(250, 196, 210);
+
+                    }
+                }
+            }
+        }
+        .formside{
+            @include flexing($direct:column,$justify:space-around);
+            background-image: url(../image/login.jpg);
+            background-repeat: none;
+            background-size: cover;
+            background-position: left;
+            width: 40%;
+            height: 100%;
+            padding: 0 10px;
+
+            @media (max-width:600px){
+                width: 80%;
+                padding: 30px 0;  
+                background-position: bottom;
+            }
+
+            div{
+                text-align: center;
+            }
+            
+            a{     
+                text-decoration: none;
+                text-align: center;
+                color: black;
+                background-color: white;
+                border-radius: 20px;
+                padding: 5px 0 5px 10px;
+                font-size: 17px;
+                width: 150px;
+            
+                &:hover{
+                    background-color: rgb(255, 233, 239);
+                }
+            }   
+        }
+    }
+}
+.passwordicon{
+    color: aqua !important;
+}

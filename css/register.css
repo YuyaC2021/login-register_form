@@ -1,0 +1,272 @@
+* {
+  padding: none;
+  margin: none;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.bgcolor {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100vw;
+  min-height: 100vh;
+  height: auto;
+}
+
+@media (max-width: 600px) {
+  .bgcolor {
+    padding: 30px 0;
+  }
+}
+
+.bgcolor .fullcontainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.247);
+          box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.247);
+  width: 80%;
+  max-width: 900px;
+  min-width: 200px;
+  height: 400px;
+}
+
+@media (max-width: 700px) {
+  .bgcolor .fullcontainer {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-shadow: 5px -5px 5px rgba(0, 0, 0, 0.247);
+            box-shadow: 5px -5px 5px rgba(0, 0, 0, 0.247);
+    height: auto;
+  }
+}
+
+.bgcolor .fullcontainer .formside {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-image: url(../image/register.jpg);
+  background-repeat: none;
+  background-size: cover;
+  background-position: left;
+  width: 30%;
+  height: 100%;
+  padding: 10px 10px;
+}
+
+@media (max-width: 700px) {
+  .bgcolor .fullcontainer .formside {
+    width: 100%;
+    padding: 30px 0;
+    background-position: bottom;
+    height: 100%;
+  }
+}
+
+.bgcolor .fullcontainer .formside div {
+  text-align: center;
+}
+
+.bgcolor .fullcontainer .formside a {
+  text-decoration: none;
+  text-align: center;
+  color: black;
+  background-color: white;
+  border-radius: 20px;
+  padding: 5px 0 5px 10px;
+  font-size: 17px;
+  width: 150px;
+}
+
+.bgcolor .fullcontainer .formside a:hover {
+  background-color: blue;
+  color: white;
+}
+
+.bgcolor .fullcontainer .formcontent {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 70%;
+  padding-bottom: 30px;
+}
+
+@media (max-width: 600px) {
+  .bgcolor .fullcontainer .formcontent {
+    width: 100%;
+    padding: 30px 30px;
+  }
+}
+
+.bgcolor .fullcontainer .formcontent > div {
+  width: 100%;
+  text-align: center;
+}
+
+.bgcolor .fullcontainer .formcontent > div > div a {
+  margin: 5px 10px;
+}
+
+.bgcolor .fullcontainer .formcontent > div > div a i {
+  color: #0045db;
+}
+
+.bgcolor .fullcontainer .formcontent .regiserform {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  width: 100%;
+}
+
+@media (max-width: 600px) {
+  .bgcolor .fullcontainer .formcontent .regiserform {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+  }
+}
+
+@media (min-width: 900px) {
+  .bgcolor .fullcontainer .formcontent .regiserform {
+    width: 90%;
+  }
+}
+
+.bgcolor .fullcontainer .formcontent .regiserform > div {
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.bgcolor .fullcontainer .formcontent .regiserform > div > span.passwordicon {
+  position: absolute;
+  top: 20%;
+  right: 5%;
+  z-index: 2;
+}
+
+.bgcolor .fullcontainer .formcontent .regiserform > div > span.passwordicon i {
+  z-index: 1;
+}
+
+.bgcolor .fullcontainer .formcontent .regiserform > div > input {
+  border: none;
+  outline: none;
+  border-radius: 20px;
+  background-color: rgba(170, 217, 255, 0.637);
+  padding: 5px 0 5px 10px;
+  font-size: 15px;
+  width: 170px;
+}
+
+.bgcolor .fullcontainer .formcontent .regiserform > div > input::-webkit-input-placeholder {
+  color: black;
+}
+
+.bgcolor .fullcontainer .formcontent .regiserform > div > input:-ms-input-placeholder {
+  color: black;
+}
+
+.bgcolor .fullcontainer .formcontent .regiserform > div > input::-ms-input-placeholder {
+  color: black;
+}
+
+.bgcolor .fullcontainer .formcontent .regiserform > div > input::placeholder {
+  color: black;
+}
+
+.bgcolor .fullcontainer .formcontent .regiserform > div > input[type=checkbox] {
+  width: 30px;
+}
+
+.bgcolor .fullcontainer .formcontent .regiserform > div > input[type=submit] {
+  border: none;
+  outline: none;
+  border-radius: 20px;
+  background-color: rgba(170, 217, 255, 0.637);
+  padding: 5px 0 5px 10px;
+  font-size: 17px;
+  width: 170px;
+}
+
+.bgcolor .fullcontainer .formcontent .regiserform > div > input[type=submit]:hover {
+  background-color: blue;
+  color: white;
+}
+/*# sourceMappingURL=register.css.map */

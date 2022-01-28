@@ -1,0 +1,214 @@
+* {
+  padding: none;
+  margin: none;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.bgcolor {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100vw;
+  min-height: 100vh;
+  height: auto;
+}
+
+@media (max-width: 600px) {
+  .bgcolor {
+    padding: 30px 0;
+    height: 800px;
+  }
+}
+
+.bgcolor .fullcontainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-shadow: -5px 5px 5px rgba(0, 0, 0, 0.247);
+          box-shadow: -5px 5px 5px rgba(0, 0, 0, 0.247);
+  width: 80%;
+  max-width: 900px;
+  min-width: 400px;
+  height: 400px;
+}
+
+@media (max-width: 600px) {
+  .bgcolor .fullcontainer {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+
+.bgcolor .fullcontainer .formcontent {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: white;
+  height: 100%;
+  width: 60%;
+}
+
+@media (max-width: 600px) {
+  .bgcolor .fullcontainer .formcontent {
+    width: 80%;
+    padding: 30px 0;
+  }
+}
+
+.bgcolor .fullcontainer .formcontent > div {
+  width: 100%;
+  text-align: center;
+}
+
+.bgcolor .fullcontainer .formcontent > div > div a {
+  margin: 5px 10px;
+}
+
+.bgcolor .fullcontainer .formcontent > div > div a i {
+  color: plum;
+}
+
+.bgcolor .fullcontainer .formcontent .loginform {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+}
+
+.bgcolor .fullcontainer .formcontent .loginform > div {
+  margin-bottom: 20px;
+}
+
+.bgcolor .fullcontainer .formcontent .loginform > div > input {
+  border: none;
+  outline: none;
+  border-radius: 20px;
+  background-color: rgba(250, 196, 210, 0.788);
+  padding: 5px 0 5px 10px;
+  font-size: 17px;
+  width: 300px;
+}
+
+.bgcolor .fullcontainer .formcontent .loginform > div > input[type=checkbox] {
+  width: 30px;
+}
+
+.bgcolor .fullcontainer .formcontent .loginform > input {
+  border: none;
+  outline: none;
+  border-radius: 20px;
+  background-color: rgba(250, 196, 210, 0.479);
+  padding: 5px 0 5px 10px;
+  font-size: 17px;
+  width: 150px;
+}
+
+.bgcolor .fullcontainer .formcontent .loginform > input:hover {
+  background-color: #fac4d2;
+}
+
+.bgcolor .fullcontainer .formside {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-image: url(../image/login.jpg);
+  background-repeat: none;
+  background-size: cover;
+  background-position: left;
+  width: 40%;
+  height: 100%;
+  padding: 0 10px;
+}
+
+@media (max-width: 600px) {
+  .bgcolor .fullcontainer .formside {
+    width: 80%;
+    padding: 30px 0;
+    background-position: bottom;
+  }
+}
+
+.bgcolor .fullcontainer .formside div {
+  text-align: center;
+}
+
+.bgcolor .fullcontainer .formside a {
+  text-decoration: none;
+  text-align: center;
+  color: black;
+  background-color: white;
+  border-radius: 20px;
+  padding: 5px 0 5px 10px;
+  font-size: 17px;
+  width: 150px;
+}
+
+.bgcolor .fullcontainer .formside a:hover {
+  background-color: #ffe9ef;
+}
+
+.passwordicon {
+  color: aqua !important;
+}
+/*# sourceMappingURL=login.css.map */
