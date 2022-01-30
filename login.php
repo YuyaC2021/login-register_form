@@ -1,3 +1,9 @@
+<!--
+    //when refresh after post added in db why ??
+    //why sometime css doesn't change ??
+    //how to check cookie ??
+-->
+
 <?php
     include "./config.php";
 ?>
@@ -94,9 +100,7 @@
                     }
                     $con->close();
                 }
-                //when refresh after post added in db why??
-                //why sometime css doesn't change ??
-
+            
                 else{
                     throw new Exception("Wrong information");
                 }
